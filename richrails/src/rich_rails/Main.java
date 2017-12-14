@@ -1,4 +1,4 @@
-package richrails;
+package rich_rails;
 
 public class Main {
 
