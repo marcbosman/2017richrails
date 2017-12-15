@@ -6,47 +6,50 @@ public class Train {
 	private int train_id;
 	private String name;
 	private int amountOfSeats;
-	
+
 	private ArrayList<Component> components;
-	
+
 	public Train(int train_id, String name, int amountOfSeats) {
 		this.train_id = train_id;
 		this.name = name;
 		this.amountOfSeats = amountOfSeats;
 		components = new ArrayList<>();
 	}
-	
-	public void addComponent(Component c){
+
+	public void addComponent(Component c) {
 		components.add(c);
 	}
-	
-	public ArrayList<Component> getComponents(){
+
+	public ArrayList<Component> getComponents() {
 		return this.components;
 	}
-	
-	public void deleteComponent(Component c){
+
+	public void deleteComponent(Component c) {
 		components.remove(c);
 	}
-	
-	public int getTrainId(){
+
+	public int getTrainId() {
 		return this.train_id;
 	}
-	
-	public String getName(){
+
+	public String getName() {
 		return this.name;
 	}
-	
-	public int getAmountOfSeats(){
+
+	public int getAmountOfSeats() {
 		return this.amountOfSeats;
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		String text;
 		if (components != null) {
-		text = "Deze trein: " + name + ", bevat de componenten: " + components;
-		}else {
+			text = "Deze trein: " + name + ", bevat de componenten: ";
+			for (Component c : components) {
+				text += "\n" + c.toString();
+			}
+		} else {
 			text = "Deze trein: " + name + ", bevat geen componenten";
 		}
 		return text;
-		}
+	}
 }
