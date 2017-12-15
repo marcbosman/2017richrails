@@ -1,6 +1,6 @@
 package rich_rails;
 
-public abstract class Component {
+public class Component {
 	private String name;
 	
 	public Component(String name){

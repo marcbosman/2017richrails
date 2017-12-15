@@ -6,12 +6,14 @@ public class Train {
 	private int train_id;
 	private String name;
 	private int amountOfSeats;
+	
 	private ArrayList<Component> components;
 	
 	public Train(int train_id, String name, int amountOfSeats) {
 		this.train_id = train_id;
 		this.name = name;
 		this.amountOfSeats = amountOfSeats;
+		components = new ArrayList<>();
 	}
 	
 	public void addComponent(Component c){
