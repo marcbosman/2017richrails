@@ -3,13 +3,11 @@ package rich_rails;
 import java.util.ArrayList;
 
 public class Train {
-	private int train_id;
 	private String name;
 
 	private ArrayList<Component> components;
 
-	public Train(int train_id, String name, int amountOfSeats) {
-		this.train_id = train_id;
+	public Train(String name) {
 		this.name = name;
 		components = new ArrayList<>();
 	}
@@ -24,10 +22,6 @@ public class Train {
 
 	public void deleteComponent(Component c) {
 		components.remove(c);
-	}
-
-	public int getTrainId() {
-		return this.train_id;
 	}
 
 	public String getName() {
