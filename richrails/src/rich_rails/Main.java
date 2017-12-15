@@ -7,6 +7,7 @@ import command.addTrainCommand;
 
 public class Main {
 	public static void main(String[] args) {
+		addTrainCommand atc = new addTrainCommand();
 		ArrayList<Train> allTrains = new ArrayList<>();
 		
 		/*JFrame frame = new JFrame();
@@ -46,6 +47,7 @@ public class Main {
 	            System.out.println("New commando");
 	            if (sub[1].equals("train") && sub.length >= 3) {
 	            	allTrains.add(new Train(sub[2]));
+	            	atc.execute(sub[2]); // Naam meegeven
 	            }
 	            break;
 	        case "delete":
