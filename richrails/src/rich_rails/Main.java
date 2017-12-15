@@ -3,6 +3,8 @@ package rich_rails;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import command.addTrainCommand;
+
 public class Main {
 	public static void main(String[] args) {
 		ArrayList<Train> allTrains = new ArrayList<>();
