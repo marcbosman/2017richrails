@@ -1,13 +1,14 @@
 package command;
+
+import rich_rails.Train;
 import rich_rails.Main;
 
-public class addTrainCommand extends Command {
+public class addTrainCommand {
 	
 	private String tName;
 
-	@Override
-	public void execute(Main m) {
-		
+	public void execute(String name) {
+		allTrains.add(new Train(name));
 	}
 
 	public void setTrain(String t) {
